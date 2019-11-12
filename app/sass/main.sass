@@ -1,0 +1,596 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: red
+
+html
+	scroll-behavior: smooth
+	
+html, body, .container
+	height: 100%
+	a
+		text-decoration: none
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $Montserrat
+	overflow-x: hidden
+	color: $text
+	margin: 0 auto
+	
+	max-width: 100%
+	//input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	
+div, input, textarea .container
+	box-sizing: border-box
+	padding: 0 auto
+	
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+	
+.row
+	border: 2px slateblue solid
+	
+.col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10.col-11
+	border: 2px darkgreen solid
+	padding: 0 auto
+	
+.container
+	border: 3px darkred solid
+	padding: 0
+	
+
+#Hero
+	
+	background: url(../img/_src/hero_bg.png)
+		size: cover
+		repeat: no-repeat
+		position: center center
+	height: 100vh
+	flex-direction: column
+	justify-content: space-between
+	
+	h1
+		color: white
+		font-weight: 700
+	.lead
+		color: #8d81ac
+		font-size: 1.8em
+		font-weight: 400
+		
+	.v
+		font-size: 0.75em
+		color: rgb(132, 142, 151)
+		text-transform: uppercase
+	.button
+		width: 390px
+		padding: 10px
+		border-radius: 50px
+		background-color: #8d81ac
+		color: #ffffff
+		font-size: 21px
+		font-weight: 700
+		align-self: center
+		position: absolute
+		bottom: -100px
+		margin-left: auto
+		margin-right: auto
+		left: 0
+		right: 0
+
+.heroFooter
+	padding-bottom: 70px
+	padding-top: 50px
+	text-align: center
+	
+	h3
+		color: #848e97
+		font-family: $Montserrat
+		font-size: 14px
+
+	h2
+		color: #635c73
+		font-family: $Montserrat
+		font-size: 48px
+		font-weight: 700
+		text-transform: uppercase
+		margin-top: 35px
+	p
+		opacity: 0.8
+		color: #323232
+		margin-top: 40px
+		
+#Get 
+	padding-top: 65px
+	background-color: #f4f4f4
+	position: relative
+
+	li
+		display: flex
+		flex-direction: row
+		padding-right: 15px
+
+		margin-top: 35px
+		h3
+			color: #323232
+			font-family: $Montserrat
+			font-size: 16px
+		p
+			color: #848e97
+			font-family: $Montserrat
+			font-size: 14px
+	h2
+		color: #8d81ac
+		font-family: $Montserrat
+		font-size: 48px
+		font-weight: 700
+.icon1
+	background: url("../img/_src/icon1.png")
+		repeat: no-repeat
+		position: center center
+	width: 350px
+	height: 64px
+	display: block
+	transition: 0.4s
+	&:hover
+		background: url("../img/_src/icon1_hover.png")
+			repeat: no-repeat
+			position: center center
+
+.icon2
+	background: url("../img/_src/icon2.png")
+		repeat: no-repeat
+		position: center center
+	width: 350px
+	height: 80px
+	display: block
+	transition: 0.4s
+	&:hover
+		background: url("../img/_src/icon2_hover.png")
+			repeat: no-repeat
+			position: center center
+
+.icon3
+	background: url("../img/_src/icon3.png")
+		repeat: no-repeat
+		position: center center
+	width: 350px
+	height: 90px
+	display: block
+	transition: 0.4s
+	&:hover
+		background: url("../img/_src/icon3_hover.png")
+			repeat: no-repeat
+			position: center center
+
+.icon4
+	background: url("../img/_src/icon4.png")
+		repeat: no-repeat
+		position: center center
+	width: 350px
+	height: 80px
+	display: block
+	transition: 0.4s
+	&:hover
+		background: url("../img/_src/icon4_hover.png")
+			repeat: no-repeat
+			position: center center
+
+
+.hidenImg
+	background: url("../img/_src/layers.png")
+
+		repeat: no-repeat
+	height: 100%
+	width: 100%
+	overflow-y: auto
+
+@media only screen and (min-device-width: 350px)
+	.showImg
+		background: url("../img/_src/layers.png")
+			repeat: no-repeat
+		min-width: 350px
+		max-width: 990px
+		height: 100vh
+
+@media only screen and (min-device-width: 990px)
+	.showImg
+		background: url("../img/_src/layers.png")
+			repeat: no-repeat
+		display: none
+
+@media only screen and (max-device-width: 990px)
+	.hidenImg
+		display: none
+
+//-slider+buttons
+.carousel-caption
+	display: flex
+	flex-direction: column
+	align-items: center
+	color: #000
+	ul
+		display: flex
+		li
+			list-style: none
+			img
+				margin-right: 20px
+	h5
+		max-width: 450px
+		color: #333333
+		font-family: $pro
+		font-size: 17px
+		font-weight: 400
+	p
+		max-width: 450px
+
+
+.carousel-indicators
+	li::before
+		background-color: #777
+		height: 3px
+
+.slider
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding-top: 100px
+	padding-bottom: 80px
+	ul
+		display: flex
+		li
+			list-style: none
+			img
+				margin-right: 20px
+	#mySlider
+		margin-top: 10px
+		z-index: 3
+
+.slider
+	.btn
+		width: 240px
+		i
+			margin-right: 30px
+	.link
+		ul
+			display: flex
+			flex-direction: column
+
+.testimonials
+	background: url("../img/_src/testimonial_bg.png") #4b3b4e no-repeat center center
+		size: cover
+	text-align: center
+	padding-top: 100px
+	padding-bottom: 50px
+	.line
+		width: 780px
+		height: 1px
+		background-color: #c7c7c7
+		opacity: 0.2
+		margin-top: 80px
+
+@media only screen and (max-device-width: 576px)
+	.testimonials
+		h2
+			color: #ffffff
+			font-family: $Montserrat
+			font-size: 48px
+			font-weight: 700
+		p
+			color: #ffffff
+			font-family: $pro
+			font-style: italic
+			margin-top: 30px
+		img
+			margin-top: 65px
+
+@media only screen and (max-device-width: 1199px)
+	.testimonials
+		h2
+			color: #ffffff
+			font-family: $Montserrat
+			font-size: 48px
+			font-weight: 700
+		p
+			color: #ffffff
+			font-family: $pro
+			font-style: italic
+			margin-top: 35px
+		img
+			margin-top: 100px
+
+@media only screen and (min-device-width: 1199px)
+	.testimonials
+		h2
+			color: #ffffff
+			font-family: $Montserrat
+			font-size: 48px
+			font-weight: 700
+		p
+			color: #ffffff
+			font-family: $pro
+			font-style: italic
+			margin-top: 35px
+		img
+			margin-top: 100px
+
+.price
+	background: url("../img/_src/price_bg.png") #4b3b4e no-repeat center center
+		size: cover
+	text-align: center
+	padding-top: 15px
+
+
+
+@media only screen and (max-device-width: 576px)
+	.price
+		padding-bottom: 30px
+	h2
+		color: #ffffff
+		font-family: $Montserrat
+		font-size: 48px
+		font-weight: 700
+
+@media only screen and (min-device-width: 577px)
+	.price
+		padding-top: 30px
+		padding-bottom: 70px
+		h2
+			color: #ffffff
+			font-family: $Montserrat
+			font-size: 48px
+			font-weight: 700
+
+
+@media only screen and (min-device-width: 320px)
+	.price
+
+		a
+			display: block
+			width: 160px
+			height: 42px
+			background-color: rgba(255,255,255,0.06)
+			border-radius: 50px
+			text-decoration: none
+			padding: 10px
+			position: absolute
+			bottom: 35px
+			margin-left: 50px
+
+
+			span
+				color: #ffffff
+				font-family: $Montserrat
+				font-size: 15px
+				font-weight: 400
+				line-height: 20.45px
+				text-transform: uppercase
+				padding: 30px
+		.priceCard
+			transition: 0.5s
+			height: 457px
+			background: rgba(255,255,255,0.06)
+			margin: 0 auto
+				top: 25px
+			padding-bottom: 48px
+
+			h5
+				color: #ffffff
+				font-family: $Montserrat
+				font-size: 24px
+				text-transform: uppercase
+				background: rgba(255,255,255,0.06)
+				width: 100%
+				height: 100px
+				padding-top: 35px
+
+		h2
+			margin-top: 35px
+		p
+			opacity: 0.3
+			color: #ffffff
+			font-family: $Montserrat
+			font-size: 14px
+			text-transform: uppercase
+		.line
+			width: 60px
+			height: 5px
+			background-color: #8d81ac
+			margin: 0 auto
+				top: 38px
+		h4
+			color: #ffffff
+			font-family: $Montserrat
+			font-size: 16px
+			font-weight: 400
+			margin: 0 auto
+				top: 30px
+				left: 20px
+				right: 20px
+			line-height: 28px
+		h6
+			opacity: 0.8
+			color: #a291a5
+			font-family: $pro
+			font-size: 14px
+			font-weight: 400
+			line-height: 21px
+			margin-top: 130px
+
+
+
+
+
+
+@media only screen and (max-device-width: 1199px)
+	.priceCard
+		width: 245px
+
+.priceCard
+	&:hover
+		transform: scale(1.1)
+		background: rgba(0, 0, 0, 0.06)
+		h5
+			background: rgba(0, 0, 0, 0.06)
+
+
+@media only screen and (min-device-width: 320px)
+	.subscription
+		padding-top: 45px
+		padding-bottom: 45px
+		background-color: #f4f4f4
+
+		h2
+			color: #635c73
+			font-family: $Montserrat
+			font-size: 30px
+			font-weight: 700
+			line-height: 60px
+			margin-left: 10px
+		input
+			width: 250px
+			height: 42px
+			border-radius: 50px
+			border: transparent
+			margin-left: 10px
+			padding-left: 20px
+		button
+			width: 140px
+			height: 42px
+			background-color: #8d81ac
+			border-radius: 50px
+			border: transparent
+			margin-left: 55px
+
+.social a
+	text-align: center
+	width: 100px
+	height: 100px
+	float: left
+	background: transparent
+	//border: 1px solid #ccc
+	box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1)
+	//border-radius: 46px
+	margin: 0 10px 10px 0
+	padding: 6px
+	color: #000
+
+.github a:hover
+	background: #191919
+	color: #fff
+.youtube a:hover
+	background: #c4302b
+	color: #fff
+.google-pluse a:hover
+	background: #DD4B39
+	color: #fff
+.twitter a:hover
+	background: #00acee
+	color: #fff
+.instagram a:hover
+	background: #3f729b
+	color: #fff
+.facebook a:hover
+	background: #3b5998
+	color: #fff
+.skype a:hover
+	background: #00aff0
+	color: #fff
+.vk a:hover
+	background: #5d84ae
+	color: #fff
+.odnoklassniki a:hover
+	background: #f93
+	color: #fff
+.pinterest a:hover
+	background: #c8232c
+	color: #fff
+.linkedin a:hover
+	background: #0e76a8
+	color: #fff
+.telegram a:hover
+	background: #249bd7
+	color: #fff
+.tumblr a:hover
+	background: #34526f
+	color: #fff
+.windows a:hover
+	background: #125acd
+	color: #fff
+.whatsapp a:hover
+	background: #50b154
+	color: #fff
+.weibo a:hover
+	background: #d52b2b
+	color: #fff
+.dropbox a:hover
+	background: #1087dd
+	color: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
